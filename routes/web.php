@@ -25,13 +25,10 @@ $router->group([
         'middleware' => 'auth',
     ], function ($router) {
 
-//        $router->post('logout', 'AuthController@logout');
         $router->delete('logout', 'AuthController@logout');
         $router->post('users/create', 'ProfileController@store');
         $router->get('users/{id}', 'ProfileController@index');
         $router->patch('users/{id}', 'ProfileController@update');
-//        $router->post('refresh', 'AuthController@refresh');
-//        $router->post('me', 'AuthController@me');
     });
 
 });
